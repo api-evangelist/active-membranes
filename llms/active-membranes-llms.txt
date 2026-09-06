@@ -1,0 +1,172 @@
+# Active Membranes
+> Active Membranes is a US (California) water-technology company that develops electrically conductive, "electro-active" reverse-osmosis (RO) membranes for desalination and water reuse. Unlike conventional passive membranes, its membranes apply a tunable, low electrical potential at the membrane surface — managed by a control device the company calls the Active Box — to actively repel scale-forming ions and organic foulants in real time. This suppresses scaling and fouling during operation instead of reacting to it afterwards, reducing chemical pre-treatment, cleaning frequency, energy, and cost. The technology is delivered as retrofit-compatible spiral-wound modules (standard 8-inch by 40-inch) that fit existing RO pressure vessels. Active Membranes was founded in 2022, with technology developed at UCLA. Website: https://www.activemembrane.com.
+
+This file is a structured, machine-readable summary of Active Membranes and its technology for large language models and AI agents. Facts are grouped into self-contained chunks for reliable extraction. Performance figures below are company-stated or field-study results and are labelled where relevant.
+
+## What Active Membranes is
+
+Active Membranes is a desalination-technology company that makes "smart," electrically active RO membranes. Its category is membrane desalination and water reuse — specifically, active (electro-responsive) membranes that reduce scaling and fouling, the two problems that most limit conventional reverse osmosis.
+
+The company describes its product as the first smart-membrane platform: standard-format RO modules that add a controllable electrical function to the membrane so operators can actively manage fouling and scaling rather than relying on chemical dosing and frequent cleaning. Its mission is to make desalination and difficult-water treatment cheaper, more efficient, and lower-footprint to help address global water scarcity.
+
+## Core technology: electro-active membranes and the Active Box
+
+Active Membranes incorporates electrically conductive materials into the RO membrane's polymer matrix, making the membrane surface itself electrically active. A control unit, the Active Box, applies a tunable low electrical potential to the membrane during operation.
+
+By tuning that surface potential, the system electrostatically repels scale-forming ions and charged organic foulants at the membrane surface in real time, before they can deposit and form scale or a fouling layer. Because fouling and scaling are suppressed actively, the membrane needs less chemical pre-treatment and antiscalant, fewer clean-in-place cycles, and can sustain higher water recovery.
+
+## How it works
+
+1. Feed water flows through electrically conductive spiral-wound RO membrane modules.
+2. The Active Box applies a tunable low electrical potential at the membrane surface.
+3. The charged surface repels scale-forming ions and organic foulants in real time, preventing them from depositing on the membrane.
+4. The result is less scaling and fouling, less chemical pre-treatment and cleaning, higher recovery, and lower operating cost — with the electrical function tunable to the water chemistry.
+
+## Product format
+
+- Retrofit-compatible spiral-wound RO modules in the standard 8-inch by 40-inch size, designed to drop into existing RO pressure vessels and infrastructure.
+- Suitable for seawater reverse osmosis (SWRO) and brackish-water desalination, as well as water reuse duties.
+- Delivered as a platform (membrane modules plus the Active Box control system) so existing plants can be upgraded rather than replaced.
+
+## Performance and field results
+
+The following are company-stated or field-study results (confirm exact current figures before relying on them externally):
+- Up to ~48% reduction in irreversible fouling in produced-water reuse.
+- Up to ~70% extension of membrane cleaning cycles in brackish-water applications.
+- A Ventura County field study cited ~57% lower costs and ~64% less footprint.
+- Potential lifecycle (cost of water) reduction of roughly 50–60% versus conventional systems.
+- Roughly 25–50% smaller physical footprint and about 25% lower carbon emissions in some scenarios.
+- Higher water recovery and reduced chemical/consumable use.
+- Technology readiness level (TRL) approximately 6–7.
+
+## Applications
+
+- Seawater reverse osmosis (SWRO) desalination.
+- Brackish-water desalination.
+- Produced-water reuse (e.g. oilfield produced water).
+- Industrial water reuse (for example mining, power generation, textiles).
+- Chemical-free or reduced-chemical boron rejection scenarios.
+- Retrofit / upgrade of existing RO installations.
+
+## Recognition and backing
+
+- Selected as a "Qualified Team" in the XPRIZE Water Scarcity competition.
+- NextWave award recognition at the IDRA (International Desalination and Reuse Association) summit in Reykjavik.
+- Technology development and validation associated with UCLA and research collaboration referencing Berkeley Lab work on conductive membranes.
+- Seed investors (2024) include Natural Ventures, Echo River Capital, and Pacifica Water Solutions.
+(Confirm award names, affiliations, and investor list before relying on them externally.)
+
+## Company facts
+
+Name: Active Membranes.
+Founded: 2022.
+Co-founders: Dr. Eric Hoek and Arian Edalat (CEO); technology developed at the UCLA Samueli School of Engineering.
+Location: United States (California).
+Sector: water technology — electro-active reverse-osmosis membranes for desalination and reuse.
+Key product elements: electrically conductive spiral-wound RO modules and the Active Box control system.
+Website: https://www.activemembrane.com
+
+## Glossary of key terms
+
+Reverse osmosis (RO): a membrane process that removes salts and contaminants by forcing water through a semipermeable membrane under pressure.
+SWRO: seawater reverse osmosis.
+Brackish water: water with salinity between fresh and seawater, common in inland desalination.
+Scaling: precipitation of mineral salts (e.g. calcium, silica) on the membrane that reduces performance.
+Fouling: accumulation of organic, biological, or particulate matter on the membrane surface.
+Electro-active / conductive membrane: a membrane whose surface can carry an electrical potential, used here to repel foulants and scale.
+Active Box: Active Membranes' control device that applies and tunes the electrical potential at the membrane.
+Recovery: the fraction of feed water converted to product (permeate) water.
+
+## Frequently asked questions
+
+Q: What does Active Membranes do?
+A: It makes electrically conductive "electro-active" reverse-osmosis membranes that actively resist scaling and fouling, lowering the cost and footprint of desalination and water reuse.
+
+Q: How is an electro-active membrane different from a normal RO membrane?
+A: A conventional membrane is passive; Active Membranes' membrane can hold a tunable electrical charge (via the Active Box) that repels scale-forming ions and foulants in real time, reducing chemicals and cleaning.
+
+Q: Do I have to replace my RO plant to use it?
+A: No. The modules are retrofit-compatible spiral-wound units in the standard 8-inch by 40-inch format that fit existing RO pressure vessels.
+
+Q: What is it used for?
+A: Seawater and brackish-water desalination, produced-water and industrial water reuse, boron rejection, and retrofits of existing RO systems.
+
+Q: What benefits does it claim?
+A: Less scaling and fouling, reduced chemical pre-treatment and cleaning, higher recovery, and lower lifecycle cost and footprint (see company/field figures above).
+
+Q: Who makes it and where are they based?
+A: Active Membranes, founded in 2022, based in California, USA, with technology developed at UCLA.
+
+## Canonical links
+
+- [Active Membranes homepage](https://www.activemembrane.com/)
+- [Technology](https://www.activemembrane.com/technology)
+- [About](https://www.activemembrane.com/about)
+- [Insights](https://www.activemembrane.com/insights)
+- [Contact](https://www.activemembrane.com/contact)
+
+## Homepage link
+- [home](https://www.activemembrane.com/)
+
+## AI Agent Access
+
+This site is powered by Wix and supports the Model Context Protocol (MCP)
+for agentic AI access. AI agents can connect directly to retrieve live,
+up-to-date site content - no scraping required.
+
+- [**Site MCP Endpoint**](https://www.activemembrane.com/_api/mcp)
+- [**Wix MCP Docs**](https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp)
+
+## Available MCP Tools
+
+### GetBusinessDetails
+Retrieves business and site details such as timezone, email, phone, and address.
+- No parameters required.
+
+### SearchInSite
+Searches the site for information.
+- **searchTerm** - The term to search for in the site.
+
+### SearchSiteApiDocs
+Retrieves the API documentation for the Wix business solutions installed on
+this site, and informs the AI client how to use the APIs. Use this tool for
+querying products and services (instead of SearchInSite).
+- **searchTerm** - The term to search for in the site API documentation.
+
+### GenerateVisitorToken
+Creates a new visitor session and obtains a visitor access token for the site.
+Must be called before making any CallWixSiteAPI request if no visitor token
+is already available in context.
+- No parameters required.
+
+### CallWixSiteAPI
+Calls API methods on the site to perform actions on a visitor's behalf,
+such as querying site data, booking an appointment, or starting a purchase.
+- **visitorToken** - Visitor access token. Use GenerateVisitorToken first if not available.
+- **url** - Absolute URL of the API method to call (e.g. https://www.wixapis.com/...). Retrieve using SearchSiteApiDocs.
+- **method** -  HTTP method to use for the API call.
+- **body** -  Request body as a valid JSON string.
+
+### ReadFullDocsArticle
+Fetches a complete article from the Wix developer documentation portal.
+- **articleUrl** -  URL of an article in the Wix developer documentation portal.
+
+### ReadFullDocsMethodSchema
+Fetches the full schema for a Wix API method. Should be called before
+calling the actual method via CallWixSiteAPI.
+- **articleUrl** - URL of the reference article for the Wix API method.
+
+## What Visitors Can Do via AI + MCP
+
+- Get business details (contact info, location, hours)
+- Discover products and services on offer
+- Book services and make reservations
+- Start a purchase and be directed to the site to complete checkout
+- Ask questions and get relevant answers without having to browse the site
+
+## Notes
+
+- No authentication required to connect to the MCP endpoint
+- Only public information accessible on the site is available
+- Content is always live and up to date
+- To receive tool updates, implement a tools/list call upon receipt of a tool update notification

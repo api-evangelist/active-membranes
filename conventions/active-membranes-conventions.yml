@@ -1,0 +1,93 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  https://www.activemembrane.com/_api/mcp (anonymous tools/list and
+  tools/call GetBusinessDetails, HTTP 200, 2026-09-06) and the tool input schemas
+  saved at mcp/active-membranes-mcp-tools.json. No provider documentation exists
+  to search — Active Membranes publishes none.
+
+surface: >-
+  One surface only: the Wix Site MCP endpoint. There is no REST or GraphQL API, so
+  every convention below describes the MCP transport and the Wix platform
+  semantics behind it, not a contract Active Membranes authored.
+
+auth_style:
+  style: none (anonymous), with an anonymous visitor session token for two tools
+  detail: >-
+    tools/list and read tools require nothing. CallWixSiteAPI and ExecuteWixAPI
+    require a visitorToken minted by GenerateVisitorToken on the same endpoint.
+  see: authentication/active-membranes-authentication.yml
+
+idempotency:
+  coverage: none
+  scope: []
+  mechanism: null
+  detail: >-
+    No idempotency mechanism exists. There is no Idempotency-Key header, no
+    client-supplied request identifier and no replay protection documented or
+    observable. The two mutation-capable tools (CallWixSiteAPI, ExecuteWixAPI)
+    carry a `hasMutations` boolean in their input schema, which is a declaration
+    by the calling agent about its own intent — a hint for the platform, not a
+    de-duplication key. Retrying a mutating call would re-execute it.
+  no_idempotency_pointer_reason: >-
+    coverage is none, so no `type: Idempotency` pointer is wired into apis.yml.
+
+reversibility:
+  grade: na
+  detail: >-
+    The reachable surface is effectively read-only for the public. This site has
+    exactly one Wix business app installed (Blog), and an anonymous visitor token
+    grants only what an unauthenticated visitor can already do — search the site,
+    read business details, read blog posts. No public write operation exists, so
+    there is no action to reverse. Recorded as `na` rather than zero: there is no
+    write surface, which is a different fact from an unreversible one.
+  write_surface: false
+  reversal_operations: []
+
+dry_run_mode:
+  supported: na
+  detail: No write surface, so a rehearsal mode has nothing to rehearse.
+
+pagination:
+  style: unknown
+  detail: >-
+    Not published and not observable anonymously. Any paging is whatever the
+    underlying Wix REST method used through CallWixSiteAPI defines; Active
+    Membranes documents none of it.
+
+versioning:
+  scheme: none-published
+  detail: >-
+    The endpoint path carries no version segment and the provider publishes no
+    versioning policy. MCP protocol version negotiation happens in the initialize
+    handshake, which is the platform's, not the provider's.
+
+error_envelope:
+  format: json-rpc-2.0-error
+  detail: >-
+    Errors are returned in the JSON-RPC 2.0 error object shape. There is no
+    RFC 9457 problem+json surface, no provider error code reference and no
+    documented error catalog — so no errors/ artifact is written rather than one
+    being invented.
+
+rate_limit_signaling:
+  present: false
+  see: rate-limits/active-membranes-rate-limits.yml
+
+request_tracing:
+  headers:
+  - x-wix-request-id
+  - mcp-session-id
+  - cf-ray
+  detail: >-
+    Platform-issued correlation identifiers, observed on the live response. The
+    provider does not document them.
+
+metadata_support: unknown
+field_expansion: unknown
+
+cross_links:
+  authentication: authentication/active-membranes-authentication.yml
+  rate_limits: rate-limits/active-membranes-rate-limits.yml
+  mcp: mcp/active-membranes-mcp.yml
+  conformance: conformance/active-membranes-conformance.yml

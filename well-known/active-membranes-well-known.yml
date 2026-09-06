@@ -1,0 +1,87 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  Direct HTTPS probes of every host this record knows: www.activemembrane.com
+  (website, docs, and MCP host) and the apex activemembrane.com.
+note: >-
+  Nothing is served. Active Membranes runs on Wix behind Cloudflare, and the Wix
+  edge answers every unknown /.well-known/* path with HTTP 400 and an HTML error
+  shell rather than 404 — so these are misses, not documents. No security.txt,
+  no OIDC or OAuth metadata, no api-catalog, no ai-plugin.json, and no A2A agent
+  card on either host. Recorded as an absence; no WellKnown or SecurityTxt
+  pointer is wired into apis.yml, because the provider serves none of these.
+  The one machine-readable discovery document the company does publish is
+  /llms.txt (HTTP 200), which is captured separately in llms/.
+
+hosts:
+- host: www.activemembrane.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 400
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 400
+    file: null
+  - path: /.well-known/api-catalog
+    status: 400
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 400
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 400
+    file: null
+  - path: /.well-known/agent.json
+    status: 400
+    file: null
+- host: activemembrane.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 400
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 400
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 400
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 400
+    file: null
+  - path: /.well-known/api-catalog
+    status: 400
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 400
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 400
+    file: null
+  - path: /.well-known/agent.json
+    status: 400
+    file: null
+
+adjacent_discovery:
+- path: /llms.txt
+  host: www.activemembrane.com
+  status: 200
+  file: llms/active-membranes-llms.txt
+- path: /robots.txt
+  host: www.activemembrane.com
+  status: 200
+  note: >-
+    Carries Cloudflare Content-Signal directives (search=yes, ai-train=no,
+    use=reference) plus an explicit allow list for GPTBot, ClaudeBot,
+    PerplexityBot, Google-Extended, CCBot and Applebot-Extended that contradicts
+    the Cloudflare-managed block above it.
+- path: /sitemap.xml
+  host: www.activemembrane.com
+  status: 200
+
+checked: '2026-09-06'

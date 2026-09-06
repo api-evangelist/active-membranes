@@ -1,0 +1,55 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  Anonymous JSON-RPC probes of https://www.activemembrane.com/_api/mcp plus the
+  tool input schemas returned by tools/list (saved verbatim at
+  mcp/active-membranes-mcp-tools.json).
+note: >-
+  There is no OpenAPI to derive from — Active Membranes publishes no REST or
+  GraphQL contract. The only authenticated-adjacent surface is the Wix Site MCP
+  endpoint, and its access model was established by probing it rather than from
+  documentation, because the company documents nothing.
+
+schemes:
+- id: none
+  type: none
+  applies_to: MCP transport (tools/list, tools/call)
+  description: >-
+    The endpoint accepts anonymous requests. tools/list and tools/call
+    GetBusinessDetails both returned HTTP 200 with no Authorization header and no
+    WWW-Authenticate challenge. There is no OAuth issuer, no RFC 9728 protected
+    resource metadata and no API key of any kind.
+  evidence:
+    url: https://www.activemembrane.com/_api/mcp
+    http_status: 200
+    fetched: '2026-09-06'
+- id: wix-visitor-token
+  type: bearer-like session token
+  applies_to: CallWixSiteAPI, ExecuteWixAPI
+  description: >-
+    Two of the nine tools require a `visitorToken` argument, minted by calling the
+    GenerateVisitorToken tool on the same endpoint. It is an anonymous visitor
+    session for the Wix site, not a customer credential: no signup, account or
+    key issuance is involved, and it grants only what an unauthenticated site
+    visitor can already do. It is issued by the Wix platform, not by
+    Active Membranes.
+  obtained_via: tools/call GenerateVisitorToken
+  evidence:
+    url: mcp/active-membranes-mcp-tools.json
+    note: inputSchema of CallWixSiteAPI and ExecuteWixAPI both require visitorToken
+
+session_headers_observed:
+- mcp-session-id
+- set-cookie XSRF-TOKEN
+
+docs: null
+docs_note: >-
+  Active Membranes publishes no authentication documentation. /developers, /docs
+  and /api all return 404. The only provider-published description of the access
+  model is one line in llms.txt: "No authentication required to connect to the
+  MCP endpoint".
+
+api_keys: false
+oauth2: false
+openid_connect: false
+mutual_tls: false

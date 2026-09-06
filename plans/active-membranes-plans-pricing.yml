@@ -1,0 +1,45 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.activemembrane.com/contact
+note: >-
+  Active Membranes publishes no pricing of any kind, for its product or for its
+  API surface. /pricing, /signup and /login all return HTTP 404, and the
+  pages sitemap lists only about, technology, technology-1, contact,
+  reverse-osmosis-insights and aimee — there is no commercial section. The
+  company sells electro-active reverse-osmosis membrane modules and the Active Box
+  control unit into water treatment plants, including under a five-year
+  Build-Own-Operate-Transfer contract for its first commercial project, so price
+  is negotiated per project and never listed. The one machine surface it operates,
+  the Wix Site MCP endpoint, is free and anonymous and carries no plan, quota or
+  metering at all. This is an honest zero, recorded rather than omitted.
+
+plan_count: 0
+plans: []
+
+model: capital-equipment-sales
+self_serve: false
+free_tier: false
+api_metered: false
+api_pricing_note: >-
+  The MCP endpoint at https://www.activemembrane.com/_api/mcp is unauthenticated
+  and free to call. It is a Wix platform feature of the marketing site, not a
+  product with a price.
+
+acquisition:
+  path: Contact form
+  url: https://www.activemembrane.com/contact
+
+x-evidence:
+- url: https://www.activemembrane.com/pricing
+  status: 404
+  fetched: '2026-09-06'
+- url: https://www.activemembrane.com/signup
+  status: 404
+  fetched: '2026-09-06'
+- url: https://www.activemembrane.com/pages-sitemap.xml
+  status: 200
+  fetched: '2026-09-06'
+  note: Six pages, none commercial.
+- url: https://www.activemembrane.com/contact
+  status: 200
+  fetched: '2026-09-06'

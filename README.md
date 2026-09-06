@@ -64,5 +64,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Active Membranes is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Active Membranes is a California water-technology company (founded 2022, technology out of the UCLA
+Samueli School of Engineering) that builds electrically conductive "electro-active" reverse-osmosis
+membranes for desalination and water reuse. A control unit the company calls the Active Box applies a
+tunable low electrical potential at the membrane surface, repelling scale-forming ions and organic
+foulants in real time instead of cleaning them off afterwards. The modules ship in the standard
+8-inch by 40-inch spiral-wound format so they retrofit into existing RO pressure vessels.
+
+Active Membranes sells capital equipment, not software. It runs no developer program and publishes no
+OpenAPI, GraphQL, AsyncAPI, WSDL, SDK or agent card. It does serve two machine-readable surfaces from
+its own hostname, both captured in this repository:
+
+- **`/llms.txt`** — a substantial hand-written summary of the company and its technology
+  ([`llms/active-membranes-llms.txt`](llms/active-membranes-llms.txt)).
+- **A live Model Context Protocol endpoint** at `https://www.activemembrane.com/_api/mcp` — anonymous,
+  unauthenticated, nine tools returned by `tools/list`
+  ([`mcp/active-membranes-mcp.yml`](mcp/active-membranes-mcp.yml)). This is the Wix Site MCP runtime,
+  not first-party engineering; what is first-party is the decision to enable and advertise it.
+
+- https://www.activemembrane.com/
