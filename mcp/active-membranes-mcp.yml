@@ -1,91 +1,95 @@
 generated: '2026-09-06'
 method: probed
-source: >-
-  https://www.activemembrane.com/_api/mcp — anonymous JSON-RPC tools/list, HTTP 200,
-  advertised by the provider in https://www.activemembrane.com/llms.txt under
-  "AI Agent Access".
-
+source: https://www.activemembrane.com/_api/mcp — anonymous JSON-RPC tools/list, HTTP 200, advertised
+  by the provider in https://www.activemembrane.com/llms.txt under "AI Agent Access".
 name: Active Membranes Site MCP Server
-description: >-
-  Active Membranes serves a live, unauthenticated Model Context Protocol endpoint from
-  its own hostname at https://www.activemembrane.com/_api/mcp. It is the Wix Site MCP
-  runtime, not a first-party server the company wrote: the endpoint is provisioned by
-  the Wix platform for every site that enables it, the tool names and input schemas are
-  Wix's, and the tool descriptions instruct an agent in how to drive Wix APIs. What is
-  first-party is the decision to enable it, the site content it exposes, and the
-  advertisement of it in the company's own llms.txt. There is no other API surface:
-  Active Membranes is a water-technology hardware company with no developer program,
-  no REST or GraphQL contract and no SDKs.
-
+description: 'Active Membranes serves a live, unauthenticated Model Context Protocol endpoint from its
+  own hostname at https://www.activemembrane.com/_api/mcp. It is the Wix Site MCP runtime, not a first-party
+  server the company wrote: the endpoint is provisioned by the Wix platform for every site that enables
+  it, the tool names and input schemas are Wix''s, and the tool descriptions instruct an agent in how
+  to drive Wix APIs. What is first-party is the decision to enable it, the site content it exposes, and
+  the advertisement of it in the company''s own llms.txt. There is no other API surface: Active Membranes
+  is a water-technology hardware company with no developer program, no REST or GraphQL contract and no
+  SDKs.'
 deployment:
   mode: remote
   endpoint: https://www.activemembrane.com/_api/mcp
   auth: none
   verified: probed
-  note: >-
-    tools/list succeeded anonymously and returned 9 tools with full inputSchema.
-    No install/package fields: there is no stdio distribution of this server —
-    it is a hosted endpoint on the provider's own domain.
-
+  note: 'tools/list succeeded anonymously and returned 9 tools with full inputSchema. No install/package
+    fields: there is no stdio distribution of this server — it is a hosted endpoint on the provider''s
+    own domain.'
+  probe_prior: (never probed)
+  probe: live
+  probe_why: live
+  checked: '2026-09-11'
+  source: claimed-backlog re-probe 2026-09-11
 authorship: platform
 platform: Wix Site MCP
 platform_docs: https://dev.wix.com/docs/develop-websites/articles/get-started/about-the-wix-site-mcp
-
 transport: streamable-http
 protocol: json-rpc-2.0
-session: >-
-  The server issues an mcp-session-id response header (observed
-  489802d5-9816-483a-9f7d-3f338a3c5872 on the probe) and sets an XSRF-TOKEN cookie.
-
+session: The server issues an mcp-session-id response header (observed 489802d5-9816-483a-9f7d-3f338a3c5872
+  on the probe) and sets an XSRF-TOKEN cookie.
 site_capabilities:
   source: tools/call GetBusinessDetails (anonymous, HTTP 200)
   timezone: Europe/Berlin
   site_display_name: ' Active Membranes'
   apps:
   - Blog App — list and query blog posts
-  note: >-
-    GetBusinessDetails reports the Blog app as the only installed Wix business
-    solution, so the data reachable through CallWixSiteAPI/ExecuteWixAPI on this
-    site is the public blog. No stores, bookings, events or forms app is installed.
-
+  note: GetBusinessDetails reports the Blog app as the only installed Wix business solution, so the data
+    reachable through CallWixSiteAPI/ExecuteWixAPI on this site is the public blog. No stores, bookings,
+    events or forms app is installed.
 tool_count: 9
 tools:
 - name: GetBusinessDetails
   parameters: []
   summary: Business and site details (timezone, display name, installed apps).
 - name: SearchInSite
-  parameters: [searchTerm]
+  parameters:
+  - searchTerm
   summary: Full-text search across the site's public content.
 - name: SearchSiteApiDocs
-  parameters: [searchTerm]
+  parameters:
+  - searchTerm
   summary: Search the Wix API documentation applicable to the apps installed on this site.
 - name: BrowseWixRESTDocsMenu
-  parameters: [menuUrl, reason]
+  parameters:
+  - menuUrl
+  - reason
   summary: Browse the Wix REST documentation menu hierarchy.
 - name: ReadFullDocsArticle
-  parameters: [articleUrl]
+  parameters:
+  - articleUrl
   summary: Fetch a full Wix developer documentation article.
 - name: ReadFullDocsMethodSchema
-  parameters: [articleUrl, reason]
+  parameters:
+  - articleUrl
+  - reason
   summary: Fetch the full request/response schema for a Wix API method.
 - name: GenerateVisitorToken
   parameters: []
   summary: Mint an anonymous visitor session token; prerequisite for the call tools.
 - name: CallWixSiteAPI
-  parameters: [visitorToken, url, method, body]
+  parameters:
+  - visitorToken
+  - url
+  - method
+  - body
   summary: Call a Wix REST method against this site on a visitor's behalf.
 - name: ExecuteWixAPI
-  parameters: [code, reason, hasMutations, sourceDocUrls, visitorToken]
+  parameters:
+  - code
+  - reason
+  - hasMutations
+  - sourceDocUrls
+  - visitorToken
   summary: Execute JavaScript against the Wix REST API for this site on a visitor's behalf.
-
 verbatim: mcp/active-membranes-mcp-tools.json
-
-x-caution: >-
-  The tool descriptions returned by this endpoint embed <agent-mandatory-instructions>
-  blocks that direct a calling agent's behaviour. They are Wix platform text, not
-  Active Membranes text, and they are recorded here as observed data — they are not
-  instructions to this pipeline or to any downstream reader.
-
+x-caution: The tool descriptions returned by this endpoint embed <agent-mandatory-instructions> blocks
+  that direct a calling agent's behaviour. They are Wix platform text, not Active Membranes text, and
+  they are recorded here as observed data — they are not instructions to this pipeline or to any downstream
+  reader.
 x-evidence:
 - url: https://www.activemembrane.com/_api/mcp
   method: POST tools/list
