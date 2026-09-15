@@ -1,29 +1,23 @@
 aid: active-membranes
 name: Active Membranes
-description: >-
-  Active Membranes is a California water-technology company, founded in 2022 out of
-  research at the UCLA Samueli School of Engineering, that builds electrically
-  conductive "electro-active" reverse-osmosis membranes for desalination and water
-  reuse. Where a conventional RO membrane filters passively and is cleaned after it
-  fouls, Active Membranes embeds conductive material in the membrane's polymer matrix
-  and uses a control unit it calls the Active Box to apply a tunable low electrical
-  potential at the membrane surface, electrostatically repelling scale-forming ions and
-  charged organic foulants in real time. The modules ship in the standard 8-inch by
-  40-inch spiral-wound format so they retrofit into existing pressure vessels, and are
-  aimed at seawater and brackish desalination, produced-water and industrial reuse. The
-  company reports field results including roughly 48% less irreversible fouling in
-  produced-water reuse, up to 70% longer cleaning cycles in brackish water, and a
-  Ventura County study citing about 57% lower cost and 64% less footprint. It has raised
-  roughly $3.24M in seed funding from Natural Ventures, Echo River Capital and Pacifica
-  Water Solutions, won the 2023 Global Water Summit Water Technology Idol award, and was
-  selected as a Qualified Team in the XPRIZE Water Scarcity competition. Active Membranes
-  sells capital equipment, not software: it operates no developer program, publishes no
-  OpenAPI, GraphQL or SDK, and lists no pricing. It does, however, serve two
-  machine-readable surfaces from its own hostname — a substantial hand-written
-  /llms.txt, and a live, unauthenticated Model Context Protocol endpoint at
-  /_api/mcp exposing nine tools over the public site content. Both are Wix platform
-  features the company chose to enable and advertise rather than first-party
-  engineering.
+description: 'Active Membranes is a California water-technology company, founded in 2022 out of research
+  at the UCLA Samueli School of Engineering, that builds electrically conductive "electro-active" reverse-osmosis
+  membranes for desalination and water reuse. Where a conventional RO membrane filters passively and is
+  cleaned after it fouls, Active Membranes embeds conductive material in the membrane''s polymer matrix
+  and uses a control unit it calls the Active Box to apply a tunable low electrical potential at the membrane
+  surface, electrostatically repelling scale-forming ions and charged organic foulants in real time. The
+  modules ship in the standard 8-inch by 40-inch spiral-wound format so they retrofit into existing pressure
+  vessels, and are aimed at seawater and brackish desalination, produced-water and industrial reuse. The
+  company reports field results including roughly 48% less irreversible fouling in produced-water reuse,
+  up to 70% longer cleaning cycles in brackish water, and a Ventura County study citing about 57% lower
+  cost and 64% less footprint. It has raised roughly $3.24M in seed funding from Natural Ventures, Echo
+  River Capital and Pacifica Water Solutions, won the 2023 Global Water Summit Water Technology Idol award,
+  and was selected as a Qualified Team in the XPRIZE Water Scarcity competition. Active Membranes sells
+  capital equipment, not software: it operates no developer program, publishes no OpenAPI, GraphQL or
+  SDK, and lists no pricing. It does, however, serve two machine-readable surfaces from its own hostname
+  — a substantial hand-written /llms.txt, and a live, unauthenticated Model Context Protocol endpoint
+  at /_api/mcp exposing nine tools over the public site content. Both are Wix platform features the company
+  chose to enable and advertise rather than first-party engineering.'
 url: https://raw.githubusercontent.com/api-evangelist/active-membranes/refs/heads/main/apis.yml
 image: https://static.wixstatic.com/media/dd52de_d31c0c0159fe4ea68318db941a61b17f~mv2.png/v1/fill/w_192,h_192,lg_1,usm_0.66_1.00_0.01/dd52de_d31c0c0159fe4ea68318db941a61b17f~mv2.png
 position: Producing
@@ -48,20 +42,17 @@ tags:
 - MCP
 - Agents
 apis:
-- aid: active-membranes-site-mcp
+- aid: active-membranes:active-membranes-site-mcp
   name: Active Membranes Site MCP Server
-  description: >-
-    A live, unauthenticated Model Context Protocol endpoint served from Active
-    Membranes' own hostname at https://www.activemembrane.com/_api/mcp and advertised by
-    the company in its own llms.txt. An anonymous JSON-RPC tools/list returns HTTP 200
-    and nine tools with full JSON Schema inputs: GetBusinessDetails, SearchInSite,
-    SearchSiteApiDocs, BrowseWixRESTDocsMenu, ReadFullDocsArticle,
-    ReadFullDocsMethodSchema, GenerateVisitorToken, CallWixSiteAPI and ExecuteWixAPI.
-    This is the Wix Site MCP runtime rather than a server the company wrote — the tools
-    and schemas are Wix's, and GetBusinessDetails reports the Blog app as the only
-    installed business solution, so what an agent can actually reach is the public site
-    and its blog posts. It is recorded because it is real, reachable, first-party-hosted
-    and deliberately advertised. Active Membranes publishes no other API of any kind.
+  description: 'A live, unauthenticated Model Context Protocol endpoint served from Active Membranes''
+    own hostname at https://www.activemembrane.com/_api/mcp and advertised by the company in its own llms.txt.
+    An anonymous JSON-RPC tools/list returns HTTP 200 and nine tools with full JSON Schema inputs: GetBusinessDetails,
+    SearchInSite, SearchSiteApiDocs, BrowseWixRESTDocsMenu, ReadFullDocsArticle, ReadFullDocsMethodSchema,
+    GenerateVisitorToken, CallWixSiteAPI and ExecuteWixAPI. This is the Wix Site MCP runtime rather than
+    a server the company wrote — the tools and schemas are Wix''s, and GetBusinessDetails reports the
+    Blog app as the only installed business solution, so what an agent can actually reach is the public
+    site and its blog posts. It is recorded because it is real, reachable, first-party-hosted and deliberately
+    advertised. Active Membranes publishes no other API of any kind.'
   humanURL: https://www.activemembrane.com/
   baseURL: https://www.activemembrane.com/_api/mcp
   image: https://static.wixstatic.com/media/dd52de_d31c0c0159fe4ea68318db941a61b17f~mv2.png/v1/fill/w_192,h_192,lg_1,usm_0.66_1.00_0.01/dd52de_d31c0c0159fe4ea68318db941a61b17f~mv2.png
@@ -120,13 +111,10 @@ x-enrichment:
   pass: local-v3
 x-coverage:
   state: covered
-  detail: >-
-    Active Membranes sells electro-active reverse-osmosis membrane modules, not
-    software, and runs no developer program — but it is not a zero: it serves a
-    hand-written /llms.txt and a live, unauthenticated Wix Site MCP endpoint at
-    /_api/mcp that returns nine tools to an anonymous tools/list. Both were
-    captured. No OpenAPI, GraphQL, AsyncAPI, WSDL, SDK, agent card or
-    /.well-known document exists on either host.
+  detail: 'Active Membranes sells electro-active reverse-osmosis membrane modules, not software, and runs
+    no developer program — but it is not a zero: it serves a hand-written /llms.txt and a live, unauthenticated
+    Wix Site MCP endpoint at /_api/mcp that returns nine tools to an anonymous tools/list. Both were captured.
+    No OpenAPI, GraphQL, AsyncAPI, WSDL, SDK, agent card or /.well-known document exists on either host.'
   evidence:
   - url: https://www.activemembrane.com/_api/mcp
     status: 200
