@@ -45,31 +45,52 @@ tools:
 - name: GetBusinessDetails
   parameters: []
   summary: Business and site details (timezone, display name, installed apps).
+  description: 'Get business and site details for " Active Membranes" (https://www.activemembrane.com/_api/mcp).
+    This tool will return business details: timezone, email, phone, fax, address, site name, business
+    name, description, business schedule, special'
 - name: SearchInSite
   parameters:
   - searchTerm
   summary: Full-text search across the site's public content.
+  description: 'Searches the site " Active Membranes" (https://www.activemembrane.com/_api/mcp) for information.
+    Use this tool ONLY in the following cases: 1. You just used "GetBusinessDetails" tool and you did
+    not find the information you need. 2. User as'
 - name: SearchSiteApiDocs
   parameters:
   - searchTerm
   summary: Search the Wix API documentation applicable to the apps installed on this site.
+  description: Searches for site " Active Membranes" (https://www.activemembrane.com/_api/mcp) API documentation
+    and returns how to use the site using the API. You are a helpful " Active Membranes" site assistant
+    chatbot and you are helping the user perfo
 - name: BrowseWixRESTDocsMenu
   parameters:
   - menuUrl
   - reason
   summary: Browse the Wix REST documentation menu hierarchy.
+  description: Browse the Wix REST API documentation menu hierarchy. Alternative to SearchWixRESTDocumentation
+    - use this to explore and discover APIs by navigating the menu structure instead of searching by keywords.
+    - Omit the `menuUrl` param to see top
 - name: ReadFullDocsArticle
   parameters:
   - articleUrl
   summary: Fetch a full Wix developer documentation article.
+  description: 'Fetches the full Wix docs article or method article with code examples for using the method.
+    Docs articles looks like this: https://dev.wix.com/docs/... and they can either be general docs articles
+    or method articles. For REST docs, use the'
 - name: ReadFullDocsMethodSchema
   parameters:
   - articleUrl
   - reason
   summary: Fetch the full request/response schema for a Wix API method.
+  description: 'Fetches the full method schema for a given method. This will give you the entire request/response
+    schema with all the fields and their descriptions. For REST API methods, prefer SearchWixAPISpec when
+    it is available: it can fetch and inspec'
 - name: GenerateVisitorToken
   parameters: []
   summary: Mint an anonymous visitor session token; prerequisite for the call tools.
+  description: Create a new visitor session and obtain a visitor access token for site " Active Membranes"
+    (https://www.activemembrane.com/_api/mcp). You must use this tool before calling CallWixSiteAPI for
+    this first time. If you already have a visitor t
 - name: CallWixSiteAPI
   parameters:
   - visitorToken
@@ -77,6 +98,9 @@ tools:
   - method
   - body
   summary: Call a Wix REST method against this site on a visitor's behalf.
+  description: Call apis on site " Active Membranes" (https://www.activemembrane.com/_api/mcp). Use this
+    to perform an action on visitor's behalf, for example, query the site's data or book an appointment.
+    Before calling this tool, you should ALWAYS check
 - name: ExecuteWixAPI
   parameters:
   - code
@@ -85,6 +109,9 @@ tools:
   - sourceDocUrls
   - visitorToken
   summary: Execute JavaScript against the Wix REST API for this site on a visitor's behalf.
+  description: Run JavaScript against the Wix REST API on site " Active Membranes" (https://www.activemembrane.com/_api/mcp),
+    on the visitor's behalf. The code runs in a sandbox and you get back whatever it returns.  PREFER
+    THIS TOOL OVER CallWixSiteAPI.
 verbatim: mcp/active-membranes-mcp-tools.json
 x-caution: The tool descriptions returned by this endpoint embed <agent-mandatory-instructions> blocks
   that direct a calling agent's behaviour. They are Wix platform text, not Active Membranes text, and
@@ -104,3 +131,5 @@ x-evidence:
   http_status: 200
   fetched: '2026-09-06'
   note: Provider advertises the endpoint and a matching tool list.
+descriptions_source: live tools/list (authorship probe or saved capture); filled by backfill-tools-from-authorship.py
+  --descriptions, 2026-09-28
