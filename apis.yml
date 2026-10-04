@@ -72,6 +72,9 @@ apis:
     url: rate-limits/active-membranes-rate-limits.yml
   - type: Plans
     url: plans/active-membranes-plans-pricing.yml
+  x-surface: platform-generated
+  x-platform: wix
+  x-platform-surface: site-mcp
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
