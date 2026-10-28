@@ -64,22 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Active Membranes is a California water-technology company (founded 2022, technology out of the UCLA
-Samueli School of Engineering) that builds electrically conductive "electro-active" reverse-osmosis
-membranes for desalination and water reuse. A control unit the company calls the Active Box applies a
-tunable low electrical potential at the membrane surface, repelling scale-forming ions and organic
-foulants in real time instead of cleaning them off afterwards. The modules ship in the standard
-8-inch by 40-inch spiral-wound format so they retrofit into existing RO pressure vessels.
+Active Membranes is a California water-technology company, founded in 2022 out of research at the UCLA Samueli School of Engineering, that builds electrically conductive "electro-active" reverse-osmosis membranes for desalination and water reuse. Where a conventional RO membrane filters passively and is cleaned after it fouls, Active Membranes embeds conductive material in the membrane's polymer matrix and uses a control unit it calls the Active Box to apply a tunable low electrical potential at the membrane surface, electrostatically repelling scale-forming ions and charged organic foulants in real time. The modules ship in the standard 8-inch by 40-inch spiral-wound format so they retrofit into existing pressure vessels, and are aimed at seawater and brackish desalination, produced-water and industrial reuse. The company reports field results including roughly 48% less irreversible fouling in produced-water reuse, up to 70% longer cleaning cycles in brackish water, and a Ventura County study citing about 57% lower cost and 64% less footprint. It has raised roughly $3.24M in seed funding from Natural Ventures, Echo River Capital and Pacifica Water Solutions, won the 2023 Global Water Summit Water Technology Idol award, and was selected as a Qualified Team in the XPRIZE Water Scarcity competition. Active Membranes sells capital equipment, not software: it operates no developer program, publishes no OpenAPI, GraphQL or SDK, and lists no pricing. It does, however, serve two machine-readable surfaces from its own hostname — a substantial hand-written /llms.txt, and a live, unauthenticated Model Context Protocol endpoint at /_api/mcp exposing nine tools over the public site content. Both are Wix platform features the company chose to enable and advertise rather than first-party engineering.
 
-Active Membranes sells capital equipment, not software. It runs no developer program and publishes no
-OpenAPI, GraphQL, AsyncAPI, WSDL, SDK or agent card. It does serve two machine-readable surfaces from
-its own hostname, both captured in this repository:
+**Areas:** Company · Water · Water Technology · Desalination · Reverse Osmosis · Membranes · Cleantech · Sustainability · Industrial · Hardware · MCP · Agents
 
-- **`/llms.txt`** — a substantial hand-written summary of the company and its technology
-  ([`llms/active-membranes-llms.txt`](llms/active-membranes-llms.txt)).
-- **A live Model Context Protocol endpoint** at `https://www.activemembrane.com/_api/mcp` — anonymous,
-  unauthenticated, nine tools returned by `tools/list`
-  ([`mcp/active-membranes-mcp.yml`](mcp/active-membranes-mcp.yml)). This is the Wix Site MCP runtime,
-  not first-party engineering; what is first-party is the decision to enable and advertise it.
+## Active Membranes on APIs.io
 
-- https://www.activemembrane.com/
+Everything profiled for Active Membranes is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/active-membranes/](https://apis.io/providers/active-membranes/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Active Membranes Site MCP Server](https://apis.io/apis/active-membranes/active-membranes-site-mcp/) — A live, unauthenticated Model Context Protocol endpoint served from Active Membranes' own hostname at https://www.activemembrane.com/_api/mcp and advertised…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Active Membranes Site MCP Server](https://apis.io/servers/active-membranes/active-membranes-site-mcp-server/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Active Membranes Authentication](https://apis.io/security/active-membranes/active-membranes-authentication/)
+- [Active Membranes Domain Security](https://apis.io/security/active-membranes/active-membranes-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Active Membranes Plans Pricing](https://apis.io/plans/active-membranes/active-membranes-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Active Membranes Rate Limits](https://apis.io/rate-limits/active-membranes/active-membranes-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.activemembrane.com/)
+- [Support](https://www.activemembrane.com/contact)
+- [Blog](https://www.activemembrane.com/reverse-osmosis-insights)
+
+## API Evangelist rating
+
+**Kin Score 13.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 7.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | platform (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/active-membranes/](https://apis.io/providers/active-membranes/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Active Membranes: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/active-membranes/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
